@@ -10,10 +10,11 @@ def upload_img():
     file_path = filedialog.askopenfilename(filetypes=[("Image files", "*.png;*.jpg;*.jpeg;*.gif")])
     if file_path:
         orig_img = Image.open(file_path)
+        orig_img.save(old_image)
 
 
-old_image = "IMG_20210319_150555867_HDR.jpg"
-output_image = "somwhere.png"
+old_image = "a.jpg"
+output_image = "removedBg.png"
 
 
 def remove_background(old_image):
